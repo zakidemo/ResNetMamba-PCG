@@ -10,7 +10,7 @@
 > **ResNetMamba-PCG** introduces bidirectional Mamba (selective state space models) to phonocardiogram classification for the first time. A capacity-matched ablation study demonstrates that Mamba is the dominant performance driver, and combining it with a temporal-preserving ResNet-1D yields the best accuracy with the lowest cross-fold variance.
 
 <p align="center">
-  <img src="figures/architecture.png" alt="ResNetMamba-PCG Architecture" width="90%"/>
+  <img src="figures/architecture.jpg" alt="ResNetMamba-PCG Architecture" width="90%"/>
 </p>
 
 ---
@@ -188,12 +188,12 @@ ResNetMamba-PCG/
 
 | Model | File | Description | Params |
 |:------|:-----|:------------|-------:|
-| ResNet-1D (full) | `resnet1d.py` | 4-layer ResNet, 512ch | ~2.8M |
-| ResNet-1D (matched) | `resnet1d_matched.py` | 2-layer ResNet, 64ch | ~50K |
-| BiMamba-only | `mamba_pcg.py` | Patch embed + 2× BiMamba | ~530K |
-| **ResNetMamba** | **`resnet_mamba.py`** | **ResNet + 2× BiMamba** | **~600K** |
-| Wavelet+ResNet | `wavelet_resnet1d.py` | DWT + dual ResNet + fusion | ~200K |
-| WaveResNetMamba | `wave_resnet_mamba.py` | DWT + dual ResNet + BiMamba | ~650K |
+| ResNet-1D (full) | `resnet1d.py` | 4-layer ResNet, 512ch | 3.84M |
+| ResNet-1D (matched) | `resnet1d_matched.py` | 2-layer ResNet, 64ch | 60K |
+| BiMamba-only | `mamba_pcg.py` | Patch embed + 2× BiMamba | 624K |
+| **ResNetMamba** | **`resnet_mamba.py`** | **ResNet + 2× BiMamba** | **723K** |
+| Wavelet+ResNet | `wavelet_resnet1d.py` | DWT + dual ResNet + fusion | 555K |
+| WaveResNetMamba | `wave_resnet_mamba.py` | DWT + dual ResNet + BiMamba | 609K |
 
 ---
 
