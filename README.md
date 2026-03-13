@@ -207,7 +207,7 @@ If you find this work useful, please cite:
              for Phonocardiogram Classification},
   author  = {Neili, Zakaria and Sundaraj, Kenneth},
   journal = {IEEE Signal Processing Letters},
-  year    = {2025},
+  year    = {2026},
   note    = {Under review}
 }
 ```
