@@ -1,0 +1,53 @@
+# ============================================================
+# ResNetMamba-PCG — Default Configuration
+# ============================================================
+# All hyperparameters match those reported in the paper.
+# Override via CLI arguments in cross_validate.py.
+
+# Dataset
+data:
+  root: "data/physionet2016"
+  target_sr: 2000
+  duration_sec: 8
+  signal_length: 16000  # target_sr × duration_sec
+
+# Model (ResNetMamba — proposed)
+model:
+  name: "resnet_mamba"
+  base_ch: 64
+  d_model: 128
+  n_mamba: 2
+  d_state: 16
+  d_conv: 4
+  expand: 2
+  num_classes: 2
+
+# Training
+training:
+  epochs: 60
+  batch_size: 16
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  grad_clip: 2.0
+  warmup_epochs: 5
+  label_smoothing: 0.1
+  class_weights: [1.0, 3.5]
+
+# Cross-validation
+cv:
+  n_folds: 5
+  seed: 42
+
+# Augmentation (training only)
+augmentation:
+  time_shift_prob: 0.5
+  time_shift_max: 0.10    # ±10% of signal length
+  amplitude_scale_prob: 0.5
+  amplitude_range: [0.8, 1.2]
+  noise_prob: 0.5
+  noise_snr_db: 46.0
+
+# Hardware
+hardware:
+  num_workers: 4
+  pin_memory: true
