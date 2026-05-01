@@ -48,3 +48,33 @@ desktop.ini
 wandb/
 runs/
 lightning_logs/
+
+# Temporary archives and local exports
+*.zip
+*.tar.gz
+*.rar
+
+# Local backup/debug files
+cross_validate_original.py
+requirements.txt
+requirements_clean.txt
+requirements_minimal_cpu.txt
+requirements_wsl_cpu.txt
+results/cv_results.json
+results/ieee_cv/smoke/
+
+# Data/checkpoints/environments
+data/
+dataset/
+datasets/
+.venv/
+venv/
+env/
+*.wav
+*.mat
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+results/**/checkpoints/

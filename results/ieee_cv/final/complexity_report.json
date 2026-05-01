@@ -1,0 +1,24 @@
+{
+  "proposed": {
+    "total_parameters": 608770,
+    "trainable_parameters": 608770,
+    "inference_time": {
+      "batch_size": 16,
+      "repeats": 100,
+      "per_batch_ms": 54.08495409999887,
+      "per_sample_ms": 3.3803096312499292,
+      "samples_per_second": 295.8308880214125
+    }
+  },
+  "resnet1d": {
+    "total_parameters": 3844930,
+    "trainable_parameters": 3844930,
+    "inference_time": {
+      "batch_size": 16,
+      "repeats": 100,
+      "per_batch_ms": 136.56272909000108,
+      "per_sample_ms": 8.535170568125068,
+      "samples_per_second": 117.16227485066784
+    }
+  }
+}

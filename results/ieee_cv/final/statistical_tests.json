@@ -1,0 +1,20 @@
+{
+  "mcnemar_proposed_vs_resnet1d": {
+    "model_a": "proposed",
+    "model_b": "resnet1d",
+    "n_matched": 3240,
+    "contingency_table": [
+      [
+        2744,
+        118
+      ],
+      [
+        160,
+        218
+      ]
+    ],
+    "table_interpretation": "[[both correct, model_a wrong/model_b correct], [model_a correct/model_b wrong, both wrong]]",
+    "p_value_chi2_corrected": 0.013931817969833062,
+    "statistic": 6.046762589928058
+  }
+}
