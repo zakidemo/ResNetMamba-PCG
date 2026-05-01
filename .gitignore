@@ -78,3 +78,6 @@ env/
 *.pth
 *.ckpt
 results/**/checkpoints/
+
+# Additional smoke-test outputs
+results/ieee_cv/smoke2/
