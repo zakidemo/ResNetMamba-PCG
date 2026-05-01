@@ -116,7 +116,7 @@ def make_model(model_name: str, cfg: Config) -> nn.Module:
             n_mamba=cfg.n_mamba,
         )
     if model_name == "resnet1d":
-        return ResNet1D(num_classes=cfg.num_classes)
+        return ResNet1D(n_classes=cfg.num_classes)
     raise ValueError(f"Unknown model_name: {model_name}")
 
 
